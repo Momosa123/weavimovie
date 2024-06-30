@@ -3,7 +3,7 @@ import FormComponent from "./FormComponent";
 
 const HeroSection = () => {
   return (
-    <div className="pt-8 md:pt-24 pb-20 px-7 relative  max-w-4xl">
+    <div className="pt-8 md:pt-20 px-7 relative  max-w-4xl mx-auto">
       <h1 className="mb-10 ">
         <span className="text-4xl	mb-4 font-extrabold block bg-green-radial text-transparent bg-clip-text ">
           Welcome to Weavimovie

@@ -27,7 +27,7 @@ const FormComponent = () => {
       <input
         value={query}
         onChange={handleChange}
-        className="border-solid border-2 border-indigo-green grow h-12 z-10  rounded-full text-stone-500	"
+        className="border-solid px-2.5 border-2 border-indigo-green grow h-12 z-10  rounded-full text-stone-500	"
         type="text"
       />
       <button className="h-12 z-10 px-6 absolute rounded-full right-7 bg-green-gradient">
