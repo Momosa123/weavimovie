@@ -1,7 +1,7 @@
 import Image from "next/image";
 import FormComponent from "./FormComponent";
 
-const HeroSection = () => {
+const Header = () => {
   return (
     <div className="pt-8 md:pt-20 px-7 relative  max-w-4xl mx-auto mb-10">
       <h1 className="mb-10 ">
@@ -26,4 +26,4 @@ const HeroSection = () => {
     </div>
   );
 };
-export default HeroSection;
+export default Header;
