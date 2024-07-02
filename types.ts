@@ -1,4 +1,5 @@
 export type Movie = {
+  uuid: string;
   movieId: number;
   title: string;
   release_date: string;
