@@ -51,5 +51,7 @@ export async function getMovies(count: number) {
     result.push(item.properties);
     if (result.length === count) break;
   }
+  client.close();
+
   return result;
 }
