@@ -41,11 +41,11 @@ const Movies = ({ movies }: { movies: Movie[] }) => {
   };
 
   return (
-    <div className="text-white">
+    <div>
       <Slider {...settings}>
         {movies.map(movie => (
           <div key={movie.movieId} className="p-2">
-            <MovieComponent movie={movie} />
+            <MovieComponent movie={movie} width={300} height={450} />;
           </div>
         ))}
       </Slider>
