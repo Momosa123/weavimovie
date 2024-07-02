@@ -1,32 +1,19 @@
-"use client";
-
-import React, { useState } from "react";
+import { redirect } from "next/navigation";
+import React from "react";
 
 const FormComponent = () => {
-  const [query, setInput] = useState("");
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const data = { query };
-    const res = await fetch("/api/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-    console.log(res);
-  };
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setInput(value);
-  };
-  console.log(query);
+  async function searchAction(formData: FormData) {
+    "use server";
+
+    const query = formData.get("queryInput") as string;
+
+    redirect(`/search/${query}`);
+  }
 
   return (
-    <form onSubmit={handleSubmit} className="width-full flex">
+    <form action={searchAction} className="width-full flex">
       <input
-        value={query}
-        onChange={handleChange}
+        name="queryInput"
         className="border-solid px-2.5 border-2 border-indigo-green grow h-12 z-10  rounded-full text-stone-500	"
         type="text"
       />

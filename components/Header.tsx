@@ -1,7 +1,7 @@
 import Image from "next/image";
 import FormComponent from "./FormComponent";
 
-const HeroSection = () => {
+const Header = () => {
   return (
     <div className="pt-8 md:pt-20 px-7 relative  max-w-4xl mx-auto mb-10">
       <h1 className="mb-10 ">
@@ -14,8 +14,8 @@ const HeroSection = () => {
             AI semantic search.{" "}
           </span>
           With the power of vector embeddings, semantic search helps AI
-          understand and interpret the meaning of your query, allowing it to
-          find movies that{" "}
+          understand and interpret the meaning of your query and data, allowing
+          it to find movies that{" "}
           <span className="bg-green-gradient text-transparent bg-clip-text">
             match your interests
           </span>{" "}
@@ -26,4 +26,4 @@ const HeroSection = () => {
     </div>
   );
 };
-export default HeroSection;
+export default Header;
