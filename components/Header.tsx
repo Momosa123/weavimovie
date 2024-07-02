@@ -14,8 +14,8 @@ const Header = () => {
             AI semantic search.{" "}
           </span>
           With the power of vector embeddings, semantic search helps AI
-          understand and interpret the meaning of your query, allowing it to
-          find movies that{" "}
+          understand and interpret the meaning of your query and data, allowing
+          it to find movies that{" "}
           <span className="bg-green-gradient text-transparent bg-clip-text">
             match your interests
           </span>{" "}

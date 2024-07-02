@@ -1,20 +1,11 @@
 import Image from "next/image";
-type MovieProp = {
-  movie: {
-    id: number;
-    title: string;
-    releaseYear: string;
-    genres: string;
-    content: string;
-    image: string;
-  };
-};
-const MovieComponent = ({ movie }: MovieProp) => {
+import { Movie } from "@/types";
+const MovieComponent = ({ movie }: { movie: Movie }) => {
   return (
     <div>
       <Image
         className="mb-1"
-        src={movie.image}
+        src={movie.poster_path}
         alt=""
         width={300}
         height={450}
