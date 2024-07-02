@@ -20,7 +20,7 @@ export async function findMovies(query: string) {
   const { objects } = await myCollection.query.nearText(
     query, // The model provider integration will automatically vectorize the query
     {
-      limit: 5,
+      limit: 4,
       returnMetadata: ["distance"],
     }
   );
@@ -32,7 +32,8 @@ export async function findMovies(query: string) {
   return result;
 }
 
-export async function getMovies() {
+export async function getMovies(count: number) {
+  "use server";
   const client = await weaviate.connectToWeaviateCloud(
     process.env.WCD_URL, // Replace with your instance URL
     {
@@ -48,7 +49,7 @@ export async function getMovies() {
   let result: Movie[] = [];
   for await (let item of myCollection.iterator()) {
     result.push(item.properties);
-    if (result.length === 8) break;
+    if (result.length === count) break;
   }
   return result;
 }
