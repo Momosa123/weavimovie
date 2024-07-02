@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import BackgroundCarousel from "@/components/BackgroundCarrousel";
-
+import Container from "@/components/Container";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         <BackgroundCarousel />
-        {children}
+        <Container>{children}</Container>
       </body>
     </html>
   );
