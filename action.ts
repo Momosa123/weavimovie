@@ -20,7 +20,7 @@ export async function findMovies(query: string) {
   const { objects } = await myCollection.query.nearText(
     query, // The model provider integration will automatically vectorize the query
     {
-      limit: 4,
+      limit: 6,
       returnMetadata: ["distance"],
     }
   );
