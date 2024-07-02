@@ -2,7 +2,6 @@
 import React from "react";
 
 import Slider from "react-slick";
-import { getMovies } from "@/action";
 import "./background-carrousel.css";
 import { displayedMovies } from "@/sampleMovies";
 import "slick-carousel/slick/slick.css";
@@ -16,7 +15,7 @@ const BackgroundCarousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 500,
     fade: true,
   };
   if (displayedMovies.length === 0) {
@@ -28,7 +27,7 @@ const BackgroundCarousel = () => {
         {displayedMovies.map((movie, index) => (
           <div key={index}>
             <div
-              className="carousel-slide"
+              className="carousel-slide carrousel-zoom"
               style={{
                 backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})`,
               }}

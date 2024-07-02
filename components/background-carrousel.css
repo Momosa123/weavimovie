@@ -12,8 +12,6 @@
   height: 100vh;
   background-size: cover;
   background-position: center;
-  -webkit-animation: zoom 50s infinite; /* Chrome, Safari, Opera */
-  animation: zoom 50s infinite;
 }
 
 .carousel-overlay {
@@ -41,4 +39,9 @@
   to {
     transform: scale(1.5, 1.5);
   }
+}
+
+.carrousel-zoom {
+  -webkit-animation: zoom 50s infinite;
+  animation: zoom 50s infinite;
 }
