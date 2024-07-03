@@ -1,4 +1,5 @@
 import { getMovieById, findMovies } from "@/action";
+import FoundMovie from "@/components/FoundMovie";
 import Movies from "@/components/Movies";
 import SingleMovie from "@/components/SingleMovie";
 import { Movie, SimilarMovie } from "@/types";
@@ -19,8 +20,14 @@ const MoviePage = async ({
   return (
     <>
       <SingleMovie movie={movie} />
-      <h2>Similar movies</h2>
-      <Movies movies={similarMovies} />
+
+      <Movies title="Similar movies">
+        {similarMovies.map(movie => (
+          <div key={movie.movieId} className="p-2">
+            <FoundMovie movie={movie} />
+          </div>
+        ))}
+      </Movies>
     </>
   );
 };
