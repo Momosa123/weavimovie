@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 const SingleMovie = ({ movie }: { movie: Movie }) => {
   return (
-    <div className="relative max-w-4xl mx-auto text-white md:flex justify-items-start  gap-x-5  ">
+    <div className="relative max-w-4xl mt-8 mx-auto text-white md:flex justify-items-start  gap-x-5  ">
       <div className="shrink-0">
         <Link href={`/movies/${movie.uuid}`}>
           <Image

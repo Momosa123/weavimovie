@@ -3,7 +3,7 @@ import FormComponent from "./FormComponent";
 import Link from "next/link";
 const Header = () => {
   return (
-    <div className="pt-8 md:pt-4 px-7 mb-8 relative  max-w-4xl mx-auto text-white">
+    <div className="pt-8 md:pt-4 px-7 relative  max-w-4xl mx-auto text-white">
       <h1 className="mb-5">
         <Link href="/" className="w-fit">
           {" "}
