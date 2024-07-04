@@ -18,8 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
         <BackgroundCarousel />
+        <Header />
         <main className="w-full p-8 md:pt-18 md:pt-0 ">{children}</main>
       </body>
     </html>

@@ -1,8 +1,8 @@
 import React from "react";
 import { getMovies } from "@/action";
-
 import Movies from "@/components/Movies";
 import MovieComponent from "@/components/MovieComponent";
+
 const App = async () => {
   const movies = await getMovies(8);
 

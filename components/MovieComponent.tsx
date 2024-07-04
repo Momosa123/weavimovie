@@ -13,7 +13,8 @@ const MovieComponent = ({
   height?: number;
 }) => {
   return (
-    <div className="text-white">
+    <div className="text-white relative">
+      {children}
       <Link href={`/movies/${movie.uuid}`}>
         <Image
           className="mb-1"
@@ -23,7 +24,6 @@ const MovieComponent = ({
           height={height}
         />
       </Link>
-      {children}
       <p className="font-bold">{movie.title}</p>
       <p>{movie.genres}</p>
     </div>

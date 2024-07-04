@@ -48,7 +48,7 @@ const Movies = ({
 
   return (
     <div>
-      <h2 className="text-2xl	mb-4 font-extrabold block bg-green-radial text-transparent bg-clip-text">
+      <h2 className="text-2xl text-center	mb-4 font-extrabold block bg-green-radial text-transparent bg-clip-text">
         {title}
       </h2>
       <Slider {...settings}>{children}</Slider>
