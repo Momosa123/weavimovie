@@ -1,7 +1,9 @@
 import { getMovieById, findMovies } from "@/action";
+import BackgroundCarousel from "@/components/BackgroundCarrousel";
 import FoundMovie from "@/components/FoundMovie";
 import Movies from "@/components/Movies";
 import SingleMovie from "@/components/SingleMovie";
+import { movies } from "@/sampleMovies";
 import { Movie, SimilarMovie } from "@/types";
 
 const MoviePage = async ({
@@ -19,6 +21,8 @@ const MoviePage = async ({
 
   return (
     <>
+      <BackgroundCarousel movies={similarMovies} />
+
       <SingleMovie movie={movie} />
 
       <Movies title="Similar movies">

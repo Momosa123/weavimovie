@@ -1,13 +1,19 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import Slider from "react-slick";
 import "./background-carrousel.css";
 import { displayedMovies } from "@/sampleMovies";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Movie } from "@/types";
 
-const BackgroundCarousel = () => {
+const BackgroundCarousel = ({ movies }: { movies: Movie[] }) => {
+  // const [isMounted, setIsMounted] = useState(false);
+
+  // useEffect(() => {
+  //   setIsMounted(true);
+  // }, []);
   const settings = {
     dots: false,
     infinite: true,
@@ -18,14 +24,14 @@ const BackgroundCarousel = () => {
     autoplaySpeed: 500,
     fade: true,
   };
-
+  // if (!isMounted) return null;
   return (
     <div className="carousel-background">
       <Slider {...settings}>
-        {displayedMovies.map((movie, index) => (
+        {movies.map((movie, index) => (
           <div key={index}>
             <div
-              className="carousel-slide carrousel-zoom"
+              className="carousel-slide"
               style={{
                 backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})`,
               }}
