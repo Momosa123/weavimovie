@@ -25,7 +25,7 @@ const BackgroundCarousel = () => {
         {displayedMovies.map((movie, index) => (
           <div key={index}>
             <div
-              className="carousel-slide"
+              className="carousel-slide carrousel-zoom"
               style={{
                 backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})`,
               }}
