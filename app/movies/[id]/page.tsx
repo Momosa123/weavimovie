@@ -14,7 +14,7 @@ const MoviePage = async ({
   const movie = (await getMovieById(id)) as Movie;
   let similarMovies = (await findMovies(movie.overview)) as SimilarMovie[];
   similarMovies.shift();
-  console.log(id);
+
   if (Object.keys(movie).length === 0) return <p>No movie found</p>;
 
   return (

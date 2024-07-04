@@ -47,7 +47,7 @@ export async function getMovies(count: number) {
 
   const collectionName = "MoviesCollection";
   const myCollection = client.collections.get<Movie>(collectionName);
-  // console.log(myCollection);
+
   let result: Movie[] = [];
   for await (let item of myCollection.iterator()) {
     const movie = {
@@ -82,6 +82,6 @@ export async function getMovieById(id: string) {
     ...response?.properties,
     uuid: response?.uuid,
   };
-  console.log(response);
+
   return movie;
 }
