@@ -11,7 +11,7 @@ const App = async () => {
     <>
       <BackgroundCarousel movies={movies} />
 
-      <div className="w-full p-8 md:px-24 md:py-8 ">
+      <div className="w-full md:px-24 md:py-8 ">
         <Movies>
           {movies.map(movie => (
             <div key={movie.movieId} className="p-2">
