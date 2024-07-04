@@ -18,9 +18,10 @@ const BackgroundCarousel = () => {
     autoplaySpeed: 500,
     fade: true,
   };
-  if (displayedMovies.length === 0) {
-    return <p>Loading</p>;
-  }
+  // if (displayedMovies.length === 0) {
+  //   return <p>Loading</p>;
+  // }
+
   return (
     <div className="carousel-background">
       <Slider {...settings}>
