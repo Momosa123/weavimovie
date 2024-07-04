@@ -4,8 +4,8 @@ import Link from "next/link";
 const Header = () => {
   return (
     <div className="pt-8 md:pt-18 px-7 relative  max-w-4xl mx-auto mb-10 text-white">
-      <h1 className="mb-10 ">
-        <Link href="/">
+      <h1 className="mb-10">
+        <Link href="/" className="w-fit">
           {" "}
           <span className="text-4xl	mb-4 font-extrabold block bg-green-radial text-transparent bg-clip-text ">
             Welcome to Weavimovie

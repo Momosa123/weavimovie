@@ -7,7 +7,13 @@ import { Movie } from "@/types";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Movies = ({ movies }: { movies: Movie[] }) => {
+const Movies = ({
+  children,
+  title,
+}: {
+  children: React.ReactNode;
+  title?: string;
+}) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -41,14 +47,11 @@ const Movies = ({ movies }: { movies: Movie[] }) => {
   };
 
   return (
-    <div className="text-white">
-      <Slider {...settings}>
-        {movies.map(movie => (
-          <div key={movie.movieId} className="p-2">
-            <MovieComponent movie={movie} />
-          </div>
-        ))}
-      </Slider>
+    <div>
+      <h2 className="text-2xl text-center	mb-4 font-extrabold block bg-green-radial text-transparent bg-clip-text">
+        {title}
+      </h2>
+      <Slider {...settings}>{children}</Slider>
     </div>
   );
 };

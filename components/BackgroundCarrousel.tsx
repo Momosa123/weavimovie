@@ -2,7 +2,6 @@
 import React from "react";
 
 import Slider from "react-slick";
-import { getMovies } from "@/action";
 import "./background-carrousel.css";
 import { displayedMovies } from "@/sampleMovies";
 import "slick-carousel/slick/slick.css";
@@ -16,12 +15,10 @@ const BackgroundCarousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 500,
     fade: true,
   };
-  if (displayedMovies.length === 0) {
-    return <p>Loading</p>;
-  }
+
   return (
     <div className="carousel-background">
       <Slider {...settings}>
