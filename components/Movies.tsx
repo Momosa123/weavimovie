@@ -2,8 +2,6 @@
 import React from "react";
 
 import Slider from "react-slick";
-import MovieComponent from "./MovieComponent";
-import { Movie } from "@/types";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -15,7 +13,7 @@ const Movies = ({
   title?: string;
 }) => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
