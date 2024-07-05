@@ -1,6 +1,3 @@
 # WeaviMovie
 
-This web application proposes movies based on the user query.  Relevant movies are found using Weaviate client with vector embeddings.
-In the first step, a database was created by vectorizing movie info like overview, genres, and release date. OPENAI model is used for different functions like vectorizing.
-When looking for a movie, the NearText operator determines the distance between the query vector and the movie vector. Movies with lower distance values are then returned.
-To learn more about the usage of AI databases https://weaviate.io/
+This web application recommends movies based on user queries. Relevant movies are identified using the Weaviate client with vector embeddings. Initially, a database was created by vectorizing movie information such as overviews, genres, and release dates. The OpenAI model is employed for vectorization. When searching for a movie, the NearText operator calculates the distance between the query vector and the movie vectors. Movies with lower distance values are then returned. To learn more about the usage of AI databases, visit Weaviate.
