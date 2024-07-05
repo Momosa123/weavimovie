@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#WeaviMovie
+This project tackles the Weviate challenge for the JavaScript/TypeScript Engineer position.
+This web application proposes movies based on the user query.  Relevnat movies are found using weaviate client
 
 ## Getting Started
 
