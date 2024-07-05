@@ -1,4 +1,4 @@
-#WeaviMovie
+# WeaviMovie
 This project tackles the Weviate challenge for the JavaScript/TypeScript Engineer position.
 This web application proposes movies based on the user query.  Relevnat movies are found using weaviate client
 
