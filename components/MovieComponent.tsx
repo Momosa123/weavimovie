@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Movie } from "@/types";
 import Link from "next/link";
+
+//Single movie component
 const MovieComponent = ({
   children,
   movie,

@@ -1,6 +1,7 @@
 import { Movie } from "@/types";
 import Link from "next/link";
 import Image from "next/image";
+//Single movie displayed when you click on a movie
 const SingleMovie = ({ movie }: { movie: Movie }) => {
   return (
     <div className="relative max-w-4xl mt-8 mx-auto text-white md:flex justify-items-start  gap-x-5  ">

@@ -2,17 +2,14 @@ import weaviate from "weaviate-client";
 import { SimilarMovie } from "./types";
 import { Movie } from "./types";
 const openaiApiKey = process.env.OPENAI_API_KEY || "";
-
+//function to find movie based on queries
 export async function findMovies(query: string) {
-  const client = await weaviate.connectToWeaviateCloud(
-    process.env.WCD_URL, // Replace with your instance URL
-    {
-      authCredentials: new weaviate.ApiKey(process.env.WCD_API_KEY),
-      headers: {
-        "X-OpenAI-Api-Key": openaiApiKey,
-      },
-    }
-  );
+  const client = await weaviate.connectToWeaviateCloud(process.env.WCD_URL, {
+    authCredentials: new weaviate.ApiKey(process.env.WCD_API_KEY),
+    headers: {
+      "X-OpenAI-Api-Key": openaiApiKey,
+    },
+  });
 
   const collectionName = "MoviesCollection";
   const myCollection = client.collections.get<Movie>(collectionName);
@@ -33,17 +30,16 @@ export async function findMovies(query: string) {
   return result;
 }
 
+//function to get a number of movies from DB
+
 export async function getMovies(count: number) {
   "use server";
-  const client = await weaviate.connectToWeaviateCloud(
-    process.env.WCD_URL, // Replace with your instance URL
-    {
-      authCredentials: new weaviate.ApiKey(process.env.WCD_API_KEY),
-      headers: {
-        "X-OpenAI-Api-Key": openaiApiKey,
-      },
-    }
-  );
+  const client = await weaviate.connectToWeaviateCloud(process.env.WCD_URL, {
+    authCredentials: new weaviate.ApiKey(process.env.WCD_API_KEY),
+    headers: {
+      "X-OpenAI-Api-Key": openaiApiKey,
+    },
+  });
 
   const collectionName = "MoviesCollection";
   const myCollection = client.collections.get<Movie>(collectionName);
@@ -61,6 +57,8 @@ export async function getMovies(count: number) {
 
   return result;
 }
+
+//function to get a specific movie with its uuid
 
 export async function getMovieById(id: string) {
   "use server";
