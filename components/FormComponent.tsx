@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import React from "react";
 
+//Form to send the query to weaviate client
 const FormComponent = () => {
   async function searchAction(formData: FormData) {
     "use server";

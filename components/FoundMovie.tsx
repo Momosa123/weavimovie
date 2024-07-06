@@ -1,5 +1,7 @@
 import { SimilarMovie } from "@/types";
 import MovieComponent from "./MovieComponent";
+
+//Returned movie after the search. Uses component composition with Moviecomponent
 const FoundMovie = ({ movie }: { movie: SimilarMovie }) => {
   const { similarity } = movie;
   return (
