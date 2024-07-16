@@ -12,9 +12,11 @@ const Header = () => {
           </span>
         </Link>
         <span className="text-xl ">
-          This is the new way to search for movies you like using{" "}
+          Describe the type of movie you want and we will give you
+          recommendation using
+          <br />
           <span className="bg-green-gradient text-transparent bg-clip-text font-bold">
-            AI semantic search.{" "}
+            AI semantic search.
           </span>
         </span>
         <div className="flex flex-row justify-center sm:justify-start   items-center gap-3">
