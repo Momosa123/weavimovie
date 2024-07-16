@@ -4,6 +4,7 @@ import BackgroundCarousel from "@/components/BackgroundCarrousel";
 import FoundMovie from "@/components/FoundMovie";
 
 import Movies from "@/components/Movies";
+//Page displaying query results
 
 const SearchResultsPage = async ({
   params: { query },

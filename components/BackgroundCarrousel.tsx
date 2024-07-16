@@ -3,17 +3,11 @@ import React, { useState, useEffect } from "react";
 
 import Slider from "react-slick";
 import "./background-carrousel.css";
-import { displayedMovies } from "@/sampleMovies";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Movie } from "@/types";
 
 const BackgroundCarousel = ({ movies }: { movies: Movie[] }) => {
-  // const [isMounted, setIsMounted] = useState(false);
-
-  // useEffect(() => {
-  //   setIsMounted(true);
-  // }, []);
   const settings = {
     dots: false,
     infinite: true,
@@ -24,7 +18,7 @@ const BackgroundCarousel = ({ movies }: { movies: Movie[] }) => {
     autoplaySpeed: 500,
     fade: true,
   };
-  // if (!isMounted) return null;
+
   return (
     <div className="carousel-background">
       <Slider {...settings}>
