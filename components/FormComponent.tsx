@@ -18,6 +18,7 @@ const FormComponent = () => {
         name="queryInput"
         className="border-solid px-2.5 border-2 border-indigo-green grow h-12 z-10  rounded-full text-stone-500	focus:outline-green-500"
         type="text"
+        placeholder="What type of film do you like? e.g. Sci-Fi films in space..."
       />
       <button className="h-12 z-10 px-6  absolute rounded-full right-7 bg-green-gradient">
         Search

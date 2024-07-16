@@ -1,5 +1,7 @@
 import { Movie } from "./types";
-export const shuffleArray = (array: Movie[]) => {
+import { getPlaiceholder } from "plaiceholder";
+
+const shuffleArray = (array: Movie[]) => {
   let currentIndex = array.length,
     randomIndex;
 
@@ -18,3 +20,14 @@ export const shuffleArray = (array: Movie[]) => {
 
   return array;
 };
+
+async function getBlurData(src: string) {
+  const buffer = await fetch(src).then(async res =>
+    Buffer.from(await res.arrayBuffer())
+  );
+
+  const data = await getPlaiceholder(buffer);
+  return data;
+}
+
+export { getBlurData, shuffleArray };

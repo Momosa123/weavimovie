@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { Movie } from "@/types";
 import Link from "next/link";
+import { getBlurData } from "@/utils";
 
 //Single movie component
-const MovieComponent = ({
+const MovieComponent = async ({
   children,
   movie,
   width = 350,
@@ -14,6 +15,9 @@ const MovieComponent = ({
   width?: number;
   height?: number;
 }) => {
+  const imageUrl = movie.poster_path;
+
+  const { base64 } = await getBlurData(imageUrl);
   return (
     <div className="text-white relative">
       {children}
@@ -24,6 +28,8 @@ const MovieComponent = ({
           alt=""
           width={width}
           height={height}
+          placeholder="blur"
+          blurDataURL={base64}
         />
       </Link>
       <p className="font-bold">{movie.title}</p>
